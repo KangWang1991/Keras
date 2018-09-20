@@ -82,22 +82,22 @@ ResNet50 defect detect
     
     
     
-    rotate_image(Image, ImageRotate270, 270, 'constant')
-    mirror_image(ImageRotate270, ImageMirror270r, 'row')
-    mirror_image(ImageRotate270, ImageMirror270c, 'column')
-    str:=ImageFiles[Index]+'270.jpg'
-        write_image(ImageRotate270, 'jpeg', 0, str)
-    str:=ImageFiles[Index]+'270r.jpg'
-        write_image(ImageMirror270r, 'jpeg', 0, str)
-    str:=ImageFiles[Index]+'270c.jpg'
-        write_image(ImageMirror270c, 'jpeg', 0, str)
-    
-    
-endfor
+     rotate_image(Image, ImageRotate270, 270, 'constant')
+     mirror_image(ImageRotate270, ImageMirror270r, 'row')
+     mirror_image(ImageRotate270, ImageMirror270c, 'column')
+     str:=ImageFiles[Index]+'270.jpg'
+         write_image(ImageRotate270, 'jpeg', 0, str)
+     str:=ImageFiles[Index]+'270r.jpg'
+         write_image(ImageMirror270r, 'jpeg', 0, str)
+     str:=ImageFiles[Index]+'270c.jpg'
+         write_image(ImageMirror270c, 'jpeg', 0, str)   
+    endfor
 
-NUM_CLASSES   = 2    #二分类
-NUM_EPOCHS    = 10  #10个循环训练
-WEIGHTS_FINAL = 'model-resnet50-final.h5'  #第一次会网上下载网络结构，训练完成后会保存更新权值的网络结构。
+
+
+    NUM_CLASSES   = 2    #二分类
+    NUM_EPOCHS    = 10  #10个循环训练
+    WEIGHTS_FINAL = 'model-resnet50-final.h5'  #第一次会网上下载网络结构，训练完成后会保存更新权值的网络结构。
 
 
 ![image](https://github.com/KangWang1991/Keras/blob/master/images/133236d6864aeb661be69ae2d29948c.png)
