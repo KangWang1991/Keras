@@ -182,8 +182,6 @@ history.loss_plot('epoch')
 
 测试：
 '''
-This script goes along my blog post:
-"Keras Cats Dogs Tutorial" (https://jkjung-avt.github.io/keras-tutorial/)
 '''
 
 
