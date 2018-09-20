@@ -2,10 +2,11 @@
 ResNet50 defect detect
 
 #
-Python3
-Tensorflow
-Keras
-ResNet50
+     Python3
+     Tensorflow
+     Keras
+     ResNet50
+     （说明：针对传统机器视觉（形态学处理，Blob，Fourier transform-Guass等）无法有效识别的瑕疵检测内容，深度学习进行泛化训练针对多种瑕疵进行更好的检测）
 #
 
 代码结构：
