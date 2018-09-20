@@ -25,29 +25,29 @@ WEIGHTS_FINAL = 'model-resnet50-final.h5'
 深度学习由于数据集增强（没有足够的训练集，通常都会这么做），考虑内存占用以及没有GPU，所以会将一张大图剪切成小图进行二分类训练：
     对检测区域进行剪切（halcon）：
 
-read_image (Ng1, 'E:/Keras-test/image/NG/256/ng (67).jpg')
-*选出检测区域
-threshold(Ng1, Region, 128, 255)
-connection(Region, ConnectedRegions)
-select_shape(ConnectedRegions, SelectedRegions, 'area', 'and', 15000, 999999999)
-fill_up(SelectedRegions, RegionFillUp)
-reduce_domain(Ng1, RegionFillUp, ImageReduced1)
-crop_domain(ImageReduced1, ImagePart1)
-get_image_size(ImagePart1, Width, Height)
+  read_image (Ng1, 'E:/Keras-test/image/NG/256/ng (67).jpg')
+  *选出检测区域
+  threshold(Ng1, Region, 128, 255)
+  connection(Region, ConnectedRegions)
+  select_shape(ConnectedRegions, SelectedRegions, 'area', 'and', 15000, 999999999)
+  fill_up(SelectedRegions, RegionFillUp)
+  reduce_domain(Ng1, RegionFillUp, ImageReduced1)
+  crop_domain(ImageReduced1, ImagePart1)
+  get_image_size(ImagePart1, Width, Height)
 
 
-indexW:=Width/256
-indexH:=Height/256
+  indexW:=Width/256
+  indexH:=Height/256
 
-for j := 1 to indexW by 1
-    for i := 1 to indexH by 1
-        gen_rectangle1(Rectangle, (i-1)*255, (j-1)*255, i*255, j*255)
-        reduce_domain(ImagePart1, Rectangle, ImageReduced)
-        crop_domain(ImageReduced, ImagePart)
-        str:='test_image/'+i+'_'+j+'.jpg'
-        write_image(ImagePart, 'jpeg', 0, str)
-    endfor
-endfor
+  for j := 1 to indexW by 1
+      for i := 1 to indexH by 1
+          gen_rectangle1(Rectangle, (i-1)*255, (j-1)*255, i*255, j*255)
+          reduce_domain(ImagePart1, Rectangle, ImageReduced)
+          crop_domain(ImageReduced, ImagePart)
+          str:='test_image/'+i+'_'+j+'.jpg'
+          write_image(ImagePart, 'jpeg', 0, str)
+      endfor
+  endfor
 
 数据集增强（旋转90、180、270、镜像）：
 
