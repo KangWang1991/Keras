@@ -1,6 +1,12 @@
 # Keras
 ResNet50 defect detect
 
+#
+Python3
+Tensorflow
+Keras
+ResNet50
+#
 
 代码结构：
 
