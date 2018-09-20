@@ -96,3 +96,9 @@ endfor
 NUM_CLASSES   = 2    #二分类
 NUM_EPOCHS    = 10  #10个循环训练
 WEIGHTS_FINAL = 'model-resnet50-final.h5'  #第一次会网上下载网络结构，训练完成后会保存更新权值的网络结构。
+
+
+![image](https://github.com/KangWang1991/Keras/blob/master/images/133236d6864aeb661be69ae2d29948c.png)
+![image](https://github.com/KangWang1991/Keras/blob/master/images/a2a231575dc119e67d7c3d697e0d589.png)
+![image](https://github.com/KangWang1991/Keras/blob/master/images/1f06a662952c0c3097914e6df932cd9.png)
+![image](https://github.com/KangWang1991/Keras/blob/master/images/9171fcd619033cafd885b8fd98a421a.png)
