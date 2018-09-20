@@ -13,7 +13,7 @@ WEIGHTS_FINAL = 'model-resnet50-final.h5'
 
 根目录： './train'
               目录结构：
-
+![image](https://github.com/KangWang1991/Keras/blob/master/images/clipboard.png)
 
 
 图像大小：256X256
